@@ -1,0 +1,34 @@
+body {
+  background-color: lavender;
+}
+
+/* #cv-form {
+  display: none;
+}
+*/
+
+
+#cv-template {
+  display: none;
+
+}
+
+.myimg {
+
+  border-radius: 50%;
+  width: 150px;
+  background-color: white;
+}
+
+.background {
+  background-color: darkgrey;
+}
+
+.new {
+  background-color: antiquewhite;
+  height: 40px;
+  font-size: small;
+}
+.new2 {
+   height: 90px;
+}
