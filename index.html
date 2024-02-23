@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>RESUME GENERATOR </title>
+</head>
+
+<body>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-4"><B>RESUME GENERATOR</B></h1>
+        <p class="text-center ">..................................</p>
+        <div class="row">
+            <div class="col-md-7">
+                <!---first column -->
+                <h3>PERSONAL INFORMATION</h3>
+                <div class="form-group mt-4">
+                    <label for="mailfield"><b>YOUR NAME</b></label>
+                    <input type="text" id="namefield" placeholder="enter NAME" class="form-control">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="mailfield"><b>YOUR email</b></label>
+                  <input type="text" id="mailfield" placeholder="enter mail" class="form-control">
+              </div>
+
+              <div class="form-group  mt-3">
+                  <label for="contactfield"><b>PHONE NUMBER</b></label>
+                  <input type="number" id="contactfield" placeholder="enter number" class="form-control">
+              </div>
+
+              <div class="form-group mt-3">
+                  <label for="addressfield"><b>YOUR ADDRESS</b></label>
+                  <textarea id="addressfield" placeholder="enter address" class="form-control" rows="4"></textarea>
+              </div>
+
+
+
+              <div class="form-group mt-2" id="sc">
+                  <label for=""><b>SCHOOL</b></label>
+                  <textarea id="schoolfield" placeholder="........enter here........" class="form-control"></textarea>
+              </div>
+
+
+              <div class="form-group mt-2" id="clg">
+                  <label for=""><b>COLLEGE</b></label>
+                  <textarea id="collegefield" placeholder="enter college name" class="form-control"></textarea>
+              </div>
+              <p class="text-secondary mt-4"> ENTER YOUR IMPORTANT PROFILE LINKS</p>
+
+              <div class="form-group  mt-3">
+                  <label for="linkedfield"><b>LINKED-IN</b></label>
+                  <input type="text" id="linkedfield" placeholder="PLACE LINK" class="form-control">
+              </div>
+
+              <div class="form-group  mt-3">
+                  <label for="fbfield"><b>FACEBOOK</b></label>
+                  <input type="text" id="fbfield" placeholder="PLACE LINK" class="form-control">
+              </div>
+
+          </div>
+
+          <div class="col-md-6">
+              <!---column 2-->
+              <h3>PROFESSIONAL INFORMATION</h3>
+
+
+
+              <div class="form-group mt-4" id="aq">
+                  <label for=""><b>ACADEMIC QULIFICATION</b></label>
+                  <textarea placeholder="........enter here........." class="form-control aqField"
+                      rows="2"></textarea>
+
+                  <div class="container text-center mt-2" id="aqAddButton">
+                      <button onclick="addNewAQfield()" class="btn btn-primary btn-sm">ADD</button>
+                  </div>
+              </div>
+
+              <div class="form-group mt-1" id="we">
+                <label for=""><b>WORK EXPERIENCE</b></label>
+                <textarea placeholder="........enter here........" class="form-control weField" rows="2"></textarea>
+
+
+                <div class="container text-center mt-2 " id="weAddButton">
+
+                    <button onclick="addNewWEfield()" class="btn btn-primary btn-sm">ADD</button>
+
+                </div>
+            </div>
+
+
+            <div class="form-group mt-1" id="st">
+                <label for=""><b>STRENGTHS</b></label>
+                <textarea placeholder="........enter here........" class="form-control stField" rows="2"></textarea>
+
+                <div class="container text-center mt-2 " id="stAddButton">
+                    <button onclick="addNewstfield()" class="btn btn-primary btn-sm">ADD</button>
+                </div>
+
+            </div>
+            <div class="form-group mt-1" id="sk">
+              <label for=""><b>SKILLS</b></label>
+              <textarea placeholder="........enter here........" class="form-control skField "
+                  rows="2"></textarea>
+              <div class="container text-center mt-2 " id="skAddButton">
+                  <button onclick="addNewskfield()" class="btn btn-primary btn-sm">ADD</button>
+              </div>
+
+          </div>
+
+          <div class="form-group mt-1" id="pr">
+              <label for=""><b>PROJECT</b></label>
+              <textarea placeholder="........enter here........" class="form-control prField "
+                  rows="2"></textarea>
+              <div class="container text-center mt-2 " id="prAddButton">
+                  <button onclick="addNewprfield()" class="btn btn-primary btn-sm">ADD</button>
+              </div>
+
+          </div>
+
+
+      </div>
+  </div>
+
+  <div class="container text-center mt-4">
+      <button onclick = "generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+  </div>
+</div>
+<div class="container" id="cv-template">
+  <div class="row ">
+
+      <div class="col-md-4 text-center mt-2 background">
+          <!---FIRST COLUMN-->
+          <img src="https://img.freepik.com/free-icon/user_318-804790.jpg" alt="" class="img-fluid myimg " />
+          <div class="container">
+              <p id="mailT1">abc@gmail.com</p>
+              <p id="contactT">7856311458, 458963214</p>
+              <p id="addressT">SECTOR JJF bcshdfgan bhdjasmd NOIDA JDND,</p>
+
+              <div class="card mt-2  new2">
+                  <div class="card-header new">
+                      <h3>SCHOOL</h3>
+                  </div>
+                  <div class="card-body">
+                      <p id="scT"> D.A.V. BAZPUR</p>
+
+                  </div>
+              </div>
+
+              <div class="card mt-2 new2">
+                  <div class="card-header new">
+                      <h3>COLLEGE</h3>
+                  </div>
+                  <div class="card-body">
+                      <p id="clgT"> GEHU</p>
+
+                  </div>
+              </div>
+              <hr />
+              <p id="lnT"> <a href="#1">https://www.google.com</a> </p>
+              <p id="fbT"> <a href="#2">https://www.facebook.com</a> </p>
+
+          </div>
+
+      </div>
+
+      <div class="col-md-8 py-5">
+          <!---SECOND COLUMN-->
+          <h1 id="nameT2" class="text-center" style="font-weight: 800">AMAN TIWARI</h1>
+
+          <!---ACADAMIC QUALIFICATIN CARD-->
+
+          <div class="card mt-4">
+              <div class="card-header background">
+                  <h3>ACADEMIC QUALIFICATION</h3>
+              </div>
+              <div class="card-body">
+
+                  <ul id="aqT">
+                      <li>ores, facere ut adipisci ha</li>
+                      <li>ores, facere ut adipisci ha</li>
+                      <li>ores, facere ut adipisci ha</li>
+                      <li>ores, facere ut adipisci ha</li>
+                  </ul>
+
+              </div>
+          </div>
+   <!---WORK EXPERIENCE-->
+
+   <div class="card mt-4">
+    <div class="card-header background">
+        <h3>WORK EXPERIENCE</h3>
+    </div>
+    <div class="card-body">
+
+        <ul id="weT">
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!---STRENGTH-->
+
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>STRENGTH</h3>
+    </div>
+    <div class="card-body">
+
+        <ul id="stT">
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+            <li>ores, facere ut adipisci ha</li>
+        </ul>
+
+    </div>
+  </div>
+
+  <!---skills-->
+  <div class="card mt-4">
+      <div class="card-header background">
+          <h3>SKILLS</h3>
+      </div>
+      <div class="card-body">
+
+          <ul id="skT">
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+          </ul>
+
+      </div>
+  </div>
+
+  <!---projects-->
+  <div class="card mt-4">
+      <div class="card-header background">
+          <h3>PROJECTS</h3>
+      </div>
+      <div class="card-body">
+
+          <ul id="prT">
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+              <li>ores, facere ut adipisci ha</li>
+          </ul>
+
+      </div>
+  </div>
+</div>
+
+<div class="container mt-1 text-center">
+    <button onclick="printCV()" class="btn background">
+        print CV
+    </button>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
